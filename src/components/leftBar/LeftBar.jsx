@@ -1,4 +1,4 @@
-import "./leftbar.scss"
+import "./leftbar.scss";
 import Friends from "../../assets/1.png";
 import Groups from "../../assets/2.png";
 import Market from "../../assets/3.png";
@@ -13,115 +13,117 @@ import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
 import { useContext } from "react";
-import { AuthContext} from "../../context/authContext"
+import { AuthContext } from "../../context/authContext";
 
- const LeftBar = () => {
+const LeftBar = () => {
 
-  const { currentUser} = useContext(AuthContext)
+  const { currentUser } = useContext(AuthContext);
 
+  console.log(currentUser.profilePic);
+  
   return (
     <div className="leftbar">
       <div className="container">
         <div className="menu">
           <div className="user">
-          <img alt="" src={currentUser.profilePic}/>
-          <span>{currentUser.name}</span>
+            <img alt="" src={currentUser.profilePic} />
+            <span>{currentUser.name}</span>
           </div>
           <div className="item">
-            <img src={Friends} alt=""/>
+            <img src={Friends} alt="" />
             <span>Friends</span>
           </div>
           <div className="item">
-            <img src={Groups} alt=""/>
+            <img src={Groups} alt="" />
             <span>Groups</span>
           </div>
           <div className="item">
-            <img src={Market} alt=""/>
+            <img src={Market} alt="" />
             <span>Market</span>
           </div>
           <div className="item">
-            <img src={Watch} alt=""/>
+            <img src={Watch} alt="" />
             <span>Watch</span>
           </div>
           <div className="item">
-            <img src={Memories} alt=""/>
+            <img src={Memories} alt="" />
             <span>Memories Of Your</span>
           </div>
         </div>
-        <hr/>
+        <hr />
         <div className="menu">
           <span>Your Shortcuts</span>
           <div className="item">
-            <img src={Events} alt=""/>
+            <img src={Events} alt="" />
             <span>Events</span>
           </div>
           <div className="item">
-            <img src={Gaming} alt=""/>
+            <img src={Gaming} alt="" />
             <span>Gaming</span>
           </div>
           <div className="item">
-            <img src={Gallery} alt=""/>
+            <img src={Gallery} alt="" />
             <span>Gallery</span>
           </div>
           <div className="item">
-            <img src={Videos} alt=""/>
+            <img src={Videos} alt="" />
             <span>Videos</span>
           </div>
           <div className="item">
-            <img src={Messages} alt=""/>
+            <img src={Messages} alt="" />
             <span>Messages</span>
           </div>
         </div>
-        <hr/>
+        <hr />
         <div className="menu">
           <span>Others</span>
           <div className="item">
-            <img src={Fund} alt=""/>
+            <img src={Fund} alt="" />
             <span>Fund</span>
           </div>
           <div className="item">
-            <img src={Tutorials} alt=""/>
+            <img src={Tutorials} alt="" />
             <span>Tutorials</span>
           </div>
           <div className="item">
-            <img src={Courses} alt=""/>
+            <img src={Courses} alt="" />
             <span>Courses</span>
           </div>
           <div className="item">
-            <img src={Tutorials} alt=""/>
+            <img src={Tutorials} alt="" />
             <span>Tutorials</span>
           </div>
           <div className="item">
-            <img src={Courses} alt=""/>
+            <img src={Courses} alt="" />
             <span>Courses</span>
           </div>
           <div className="item">
-            <img src={Tutorials} alt=""/>
+            <img src={Tutorials} alt="" />
             <span>Tutorials</span>
           </div>
           <div className="item">
-            <img src={Courses} alt=""/>
+            <img src={Courses} alt="" />
             <span>Courses</span>
           </div>
           <div className="item">
-            <img src={Tutorials} alt=""/>
+            <img src={Tutorials} alt="" />
             <span>Tutorials</span>
           </div>
           <div className="item">
-            <img src={Courses} alt=""/>
+            <img src={Courses} alt="" />
             <span>Courses</span>
           </div>
           <div className="item">
-            <img src={Tutorials} alt=""/>
+            <img src={Tutorials} alt="" />
             <span>Tutorials</span>
           </div>
           <div className="item">
-            <img src={Courses} alt=""/>
+            <img src={Courses} alt="" />
             <span>Courses</span>
           </div>
         </div>
       </div>
     </div>
-  )
-}
-export default  LeftBar
+  );
+};
+export default LeftBar;

@@ -10,6 +10,7 @@ import "./style.scss"
 import { useContext } from "react";
 import {DarkModeContext} from "./context/darkModeContext"
 import { AuthContext } from "./context/authContext";
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 function App() {
 
@@ -18,10 +19,12 @@ function App() {
   console.log(darkMode)
 
   const {currentUser} = useContext(AuthContext)
+  const queryClient = new QueryClient()
 
   const Layout = () => {
     return (
-      <div className={`theme-${darkMode ? "dark" : "light"}`}>
+     <QueryClientProvider client={queryClient}>
+       <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <Navbar />
         <div style={{ display: "flex" }}>
           <LeftBar />
@@ -29,6 +32,7 @@ function App() {
           <RightBar />
         </div>
       </div>
+     </QueryClientProvider>
     );
   };
   const ProtectedRoute = ({children})=>{

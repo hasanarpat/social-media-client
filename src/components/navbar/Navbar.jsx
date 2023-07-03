@@ -13,6 +13,7 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
+  
   const { toggle, darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
 
@@ -39,10 +40,7 @@ const Navbar = () => {
         <EmailOutlinedIcon />
         <NotificationsNoneOutlinedIcon />
         <div className="user">
-          <img
-            alt=""
-            src={currentUser.profilePic}
-          />
+          <img alt="" src={currentUser.profilePic} />
           <span>{currentUser.name}</span>
         </div>
       </div>
